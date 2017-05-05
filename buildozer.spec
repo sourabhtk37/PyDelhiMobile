@@ -1,19 +1,19 @@
 [app]
 
 # (str) Title of your application
-title = PyDelhiConf
+title = PyDelhi Conf 2017
 
 # (str) Package name
 package.name = conference
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.pydelhi
+package.domain = org.pydelhiconf
 
 # (str) Source code where the main.py live
-source.dir = ./pydelhiapp
+source.dir = ./pydelhiconf
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,vs,fs,json,gif
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -25,7 +25,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 0.3
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -33,7 +33,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = hostpython2,android,kivy,docutils
+requirements = hostpython2,android,openssl,kivy,futures,requests
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -49,7 +49,7 @@ presplash.filename = %(source.dir)s/data/icon.png
 icon.filename = %(source.dir)s/data/icon.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
-orientation = all
+orientation = portrait
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -69,7 +69,7 @@ orientation = all
 fullscreen = 1
 
 # (list) Permissions
-#android.permissions = INTERNET
+android.permissions = INTERNET
 
 # (int) Android API to use
 #android.api = 19
@@ -158,6 +158,7 @@ fullscreen = 1
 # (str) Name of the certificate to use for signing the debug version
 # Get a list of available identities: buildozer ios list_identities
 #ios.codesign.debug = "iPhone Developer: <lastname> <firstname> (<hexstring>)"
+ios.codesign.debug = "iPhone Distribution: Akshay Arora (RPJ7XAT92V)"
 
 # (str) Name of the certificate to use for signing the release version
 #ios.codesign.release = %(ios.codesign.debug)s
